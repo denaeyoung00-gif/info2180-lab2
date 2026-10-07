@@ -18,11 +18,11 @@ body {
     min-height: 100vh;
 }
 
-header {
+.header {
+    display: flex;
     grid-area: header;
     background-color: #3C8527;
     color: #FFFFFF;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -50,7 +50,7 @@ header p {
     font-style: italic;
 }
 
-aside {
+.aside {
     grid-area: sidebar;
     padding: 20px;
 }
@@ -125,7 +125,7 @@ article + article {
     margin-top: 25px;
 }
 
-footer {
+.footer {
     grid-area: footer;
     background-color: #28651C;
     color: #FFFFFF;
