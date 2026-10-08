@@ -1,7 +1,7 @@
 
 body {
     margin: 0;
-    font-size: 18px;
+    font-size: 14px;
     color: #2D3748;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                  "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -9,8 +9,8 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 250px 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 170px 1fr 55px;
     grid-template-areas:
         "header header"
         "sidebar main"
@@ -19,93 +19,160 @@ body {
 }
 
 .header {
-    display: flex;
     grid-area: header;
-    background-color: #3C8527;
-    color: #FFFFFF;
+    background-color: #358525;
+    color: white;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
 }
 
+.profile {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid white;
+    margin-bottom: 8px;
+}
 
-header h1 {
-    font-size: 39px;
+.header h1 {
+    font-size: 32px;
     font-family: "Trebuchet MS", Arial, sans-serif;
     margin: 0;
 }
 
-header p {
-    margin: 5px 0 0;
-    color: #FFFFFF;
+.header p {
+    margin: 6px 0 0;
+    color: white;
     font-style: italic;
+    font-size: 13px;
 }
 
-.aside {
+.sidebar {
     grid-area: sidebar;
-    padding: 20px;
+    padding: 25px 14px;
+    border-right: 1px solid #CBD5E0;
 }
 
 .about {
     background-color: #E2E8F0;
-    padding: 15px;
-}
-
-aside h3 {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    padding: 10px 8px;
+    margin-bottom: 16px;
 }
 
 .about h3 {
-    color: #333322;
+    margin: 0 0 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 15px;
+    color: #333333;
+}
+
+.about p {
+    margin: 0;
+    line-height: 1.35;
+}
+
+.social,
+.archives {
+    border-left: 3px solid #3C8527;
+    padding-left: 11px;
+    margin-bottom: 20px;
 }
 
 .social h3,
 .archives h3 {
+    margin: 0 0 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 15px;
     color: #28651C;
 }
 
 .social ul,
 .archives ul {
-    padding-left: 20px;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
 }
 
-aside .social li a,
-aside .archives li a {
+.social li,
+.archives li {
+    margin-bottom: 5px;
+}
+
+.social a,
+.archives a {
     color: #2879B8;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-main {
+.social a:hover,
+.archives a:hover {
+    text-decoration: underline;
+}
+
+.main {
     grid-area: main;
-    padding: 30px;
+    padding: 30px 25px;
+    max-width: 850px;
 }
 
 article {
     overflow: hidden;
 }
 
-h2 {
-    font-size: 34px;
+article h2 {
+    font-size: 21px;
     color: #28651C;
-    margin: 0 0 5px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    margin: 0 0 4px;
 }
 
 .post-meta {
     color: #667267;
-    margin-top: 0;
+    font-size: 12px;
+    margin: 0 0 12px;
 }
 
+article p {
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.float-right {
+    float: right;
+    width: 150px;
+    height: 90px;
+    object-fit: cover;
+    margin: 0 0 8px 18px;
+}
+
+.float-left {
+    float: left;
+    width: 150px;
+    height: 90px;
+    object-fit: cover;
+    margin: 0 18px 8px 0;
+}
 
 article + article {
     border-top: 1px solid #E2E8F0;
-    padding-top: 25px;
-    margin-top: 25px;
+    padding-top: 16px;
+    margin-top: 20px;
 }
 
 .footer {
     grid-area: footer;
     background-color: #28651C;
-    color: #FFFFFF;
+    color: white;
     text-align: center;
     padding: 15px;
+}
+
+.footer p {
+    margin: 5px;
+    font-size: 12px;
 }
